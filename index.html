@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nairobi Classic Outfits</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #222;
+        }
+
+      header {
+    background: linear-gradient(135deg, #000000, #1f1f1f);
+    color: white;
+    text-align: center;
+    padding: 45px 15px;
+    border-bottom: 3px solid #f5c542;
+      }
+
+        header h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: #f5c542;
+    letter-spacing: 1px;
+        }
+
+      header p {
+    font-size: 17px;
+    color: #eeeeee;
+    letter-spacing: 1px;
+      }
+
+      nav {
+    background-color: #111;
+    text-align: center;
+    padding: 16px 10px;
+    border-bottom: 1px solid #333;
+      }
+
+     nav a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 8px;
+    padding: 8px 10px;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+     }
+
+        nav a:hover {
+    color: #f5c542;
+        }
+
+        .hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f5f5f5, #e5e5e5);
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        }
+
+        .hero h2 {
+    font-size: 36px;
+    margin-bottom: 18px;
+    color: #111;
+        }
+
+       .hero p {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #444;
+       }
+.delivery-badge {
+    display: inline-block;
+    background-color: #fff;
+    color: #111;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 5px 0 18px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+     .btn {
+    display: inline-block;
+    background-color: #111;
+    color: white;
+    padding: 14px 22px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+     }
+
+        .btn:hover {
+    background-color: #f5c542;
+    color: #111;
+    transform: translateY(-2px);
+        }
+
+        .section {
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+      .badge {
+    display: inline-block;
+    background-color: #f5c542;
+    color: #111;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 12px;
+      }
+
+        .product {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+    transition: 0.3s;
+    border: 1px solid #eeeeee;
+        }
+      .product:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+      }
+
+      .product-image {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    background-color: #f5f5f5;
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.08);
+}
+
+        .product h3 {
+    margin-bottom: 10px;
+    font-size: 21px;
+    color: #111;
+    line-height: 1.3;
+        }
+
+        .price {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 12px 0;
+    color: #b8860b;
+        }
+      .availability {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 15px;
+      }
+
+       .sizes {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+       }
+
+        .about {
+    background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+        }
+
+        .contact {
+            background-color: #111;
+            color: white;
+        }
+
+        .contact p {
+    margin: 12px 0;
+}
+
+.contact a:not(.btn) {
+    color: #f5c542;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:not(.btn):hover {
+    text-decoration: underline;
+}
+
+        footer {
+    background: linear-gradient(135deg, #000000, #1f1f1f);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    border-top: 3px solid #f5c542;
+}
+
+footer h3 {
+    color: #f5c542;
+    margin-bottom: 12px;
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 25px;
+            }
+
+            .hero h2 {
+                font-size: 26px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .product {
+                width: 100%;
+                max-width: 330px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>👟 Nairobi Classic Outfits</h1>
+        <p>Step Into Style & Confidence</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <h2>Welcome to Nairobi Classic Outfits 🔥</h2>
+
+        <p>
+            Quality footwear, classic style and affordable prices.
+        </p>
+
+        <p>
+            🚚 Delivery available countrywide at a fee.
+        </p>
+
+        <br>
+
+        <a href="#collection" class="btn">View Our Shoes</a>
+    </section>
+
+    <section class="section" id="collection">
+
+        <h2>Our Shoe Collection 👟</h2>
+
+<p style="font-size: 17px; margin-bottom: 8px;">
+    Featured styles from our collection.
+</p>
+
+<p style="font-size: 16px; margin-bottom: 30px;">
+    More styles available at fair prices. 👟✨
+</p>
+
+        <div class="products">
+
+            <div class="product">
+    <span class="badge">Featured</span>
+                <img src="wetlooks.jpg" alt="Official Wetlooks" class="product-image">
+                </>
+
+                <h3>Official Wetlooks 🔥</h3>
+
+                <p class="sizes">
+                    Sizes: 39 - 45
+                </p>
+
+                <p class="price">KSh 2,800</p>
+              <p class="availability">🟢 Available</p>
+
+                <a href="https://wa.me/254798485535?text=Hello%20Nairobi%20Classic%20Outfits%2C%20I%20am%20interested%20in%20the%20Official%20Wetlooks%20%28KSh%202%2C800%29." class="btn">
+    💬 Order on WhatsApp
+                </a>
+            </>
+
+
+            <div class="product">
+    <span class="badge">Featured</span>
+                <img src="newbalance.jpg" alt="New Balance 2000R Pink" class="product-image">
+
+                <h3>New Balance 2000R Pink</h3>
+
+                <p class="sizes">
+                    Sizes: 36 - 42
+                </p>
+
+                <p class="price">KSh 3,800</p>
+              <p class="availability">🟢 Available</p>
+
+                <a href="https://wa.me/254798485535?text=Hello%20Nairobi%20Classic%20Outfits%2C%20I%20am%20interested%20in%20the%20New%20Balance%202000R%20Pink%20%28KSh%203%2C800%29." class="btn">
+    💬 Order on WhatsApp
+                </a>
+            </>
+
+
+            <div class="product">
+    <span class="badge">Featured</span>
+                <img src="nikevalentine.jpg" alt="Nike Air Force 1 Valentine" class="product-image">
+
+                <h3>Nike Air Force 1 Valentine ❤️🔥</h3>
+
+                <p class="sizes">
+                    Sizes: 36 - 42
+                </p>
+
+                <p class="price">KSh 2,800</p>
+              <p class="availability">🟢 Available</p>
+
+                <a href="https://wa.me/254798485535?text=Hello%20Nairobi%20Classic%20Outfits%2C%20I%20am%20interested%20in%20the%20Nike%20Air%20Force%201%20Valentine%20%28KSh%202%2C800%29." class="btn">
+    💬 Order on WhatsApp
+                </a>
+            </>
+<div class="product">
+    <span class="badge">More Styles</span>
+    <img src="newshoe1.jpg" alt="More Shoe Style" class="product-image">
+    <h3>More Styles Available 👟</h3>
+    <a href="https://wa.me/254798485535?text=Hello%20Nairobi%20Classic%20Outfits%20%F0%9F%91%9F%2C%20I%27m%20interested%20in%20one%20of%20the%20shoes%20on%20your%20website.%20Kindly%20share%20the%20available%20styles%2C%20sizes%20and%20prices.%20Thank%20you." class="btn">💬 Order / Inquire on WhatsApp</a>
+</div>
+
+<div class="product">
+    <span class="badge">More Styles</span>
+    <img src="newshoe2.jpg" alt="More Shoe Style" class="product-image">
+    <h3>More Styles Available 👟</h3>
+    <a href="https://wa.me/254798485535?text=Hello%20Nairobi%20Classic%20Outfits%20%F0%9F%91%9F%2C%20I%27m%20interested%20in%20one%20of%20the%20shoes%20on%20your%20website.%20Kindly%20share%20the%20available%20styles%2C%20sizes%20and%20prices.%20Thank%20you." class="btn">💬 Order / Inquire on WhatsApp</a>
+</div>
+
+<div class="product">
+    <span class="badge">More Styles</span>
+    <img src="newshoe3.jpg" alt="More Shoe Style" class="product-image">
+    <h3>More Styles Available 👟</h3>
+    <a href="https://wa.me/254798485535?text=Hello%20Nairobi%20Classic%20Outfits%20%F0%9F%91%9F%2C%20I%27m%20interested%20in%20one%20of%20the%20shoes%20on%20your%20website.%20Kindly%20share%20the%20available%20styles%2C%20sizes%20and%20prices.%20Thank%20you." class="btn">💬 Order / Inquire on WhatsApp</a>
+</div>
+
+<div class="product">
+    <span class="badge">More Styles</span>
+    <img src="newshoe4.jpg" alt="More Shoe Style" class="product-image">
+    <h3>More Styles Available 👟</h3>
+    <a href="https://wa.me/254798485535?text=Hello%20Nairobi%20Classic%20Outfits%20%F0%9F%91%9F%2C%20I%27m%20interested%20in%20one%20of%20the%20shoes%20on%20your%20website.%20Kindly%20share%20the%20available%20styles%2C%20sizes%20and%20prices.%20Thank%20you." class="btn">💬 Order / Inquire on WhatsApp</a>
+</div>
+
+<div class="product">
+    <span class="badge">More Styles</span>
+    <img src="newshoe5.jpg" alt="More Shoe Style" class="product-image">
+    <h3>More Styles Available 👟</h3>
+    <a href="https://wa.me/254798485535?text=Hello%20Nairobi%20Classic%20Outfits%20%F0%9F%91%9F%2C%20I%27m%20interested%20in%20one%20of%20the%20shoes%20on%20your%20website.%20Kindly%20share%20the%20available%20styles%2C%20sizes%20and%20prices.%20Thank%20you." class="btn">💬 Order / Inquire on WhatsApp</a>
+</div>
+
+<div class="product">
+    <span class="badge">More Styles</span>
+    <img src="newshoe6.jpg" alt="More Shoe Style" class="product-image">
+    <h3>More Styles Available 👟</h3>
+    <a href="https://wa.me/254798485535?text=Hello%20Nairobi%20Classic%20Outfits%20%F0%9F%91%9F%2C%20I%27m%20interested%20in%20one%20of%20the%20shoes%20on%20your%20website.%20Kindly%20share%20the%20available%20styles%2C%20sizes%20and%20prices.%20Thank%20you." class="btn">💬 Order / Inquire on WhatsApp</a>
+</div>
+        </div>
+
+    </section>
+
+
+    <section class="section about" id="about">
+
+    <h2>About Nairobi Classic Outfits 👟</h2>
+
+    <p>
+    Welcome to Nairobi Classic Outfits, a footwear brand owned by
+    <strong>Antoney Muchui</strong>.
+</p>
+
+<br>
+
+<p>
+    We offer stylish, quality and affordable footwear in different
+    designs and sizes to suit different tastes and occasions.
+</p>
+
+    <br>
+
+    <p class="delivery-badge">
+    🚚 Countrywide Delivery Available — At a Fee
+    </p>
+
+    <br>
+
+    <p>
+        <strong>Owner:</strong> Antoney Muchui
+    </p>
+
+    </section>
+
+<section class="section">
+
+    <h2>Why Choose Nairobi Classic Outfits? ⭐</h2>
+
+    <div class="products">
+
+        <div class="product">
+            <h3>👟 Quality Footwear</h3>
+            <p>Stylish shoes selected with quality and comfort in mind.</p>
+        </div>
+
+        <div class="product">
+            <h3>💰 Fair Prices</h3>
+            <p>More styles available at fair and affordable prices.</p>
+        </div>
+
+        <div class="product">
+            <h3>🚚 Countrywide Delivery</h3>
+            <p>We deliver across Kenya at a delivery fee.</p>
+        </div>
+
+    </div>
+
+</section>
+              <section class="section">
+
+    <h2>How to Order 🛍️</h2>
+
+    <div class="products">
+
+        <div class="product">
+            <h3>1️⃣ Choose Your Shoe</h3>
+            <p>Browse our featured collection and choose your preferred style.</p>
+        </div>
+
+        <div class="product">
+            <h3>2️⃣ Contact Us</h3>
+            <p>Tap the WhatsApp button and send us the shoe name and size you want.</p>
+        </div>
+
+        <div class="product">
+            <h3>3️⃣ Delivery</h3>
+            <p>We arrange delivery across Kenya at a delivery fee.</p>
+        </div>
+
+    </div>
+
+              </section>
+    <section class="section contact" id="contact">
+
+    <h2>Contact Nairobi Classic Outfits 📞</h2>
+
+    <p>
+        <strong>Owner:</strong> Antoney Muchui
+    </p>
+
+    <p>
+        <strong>Phone:</strong>
+        <a href="tel:0798485535">0798485535</a>
+    </p>
+
+    <p>
+        <strong>Email:</strong>
+        <a href="mailto:amoutfits26@gmail.com">
+            amoutfits26@gmail.com
+        </a>
+    </p>
+
+    <p>
+        🚚 Countrywide delivery available at a fee.
+    </p>
+
+    <br>
+
+    <a href="https://wa.me/254798485535" class="btn">
+        💬 Chat With Us on WhatsApp
+    </a>
+      <br><br>
+
+<a href="tel:0798485535" class="btn">
+    📞 Call Us
+</a>
+
+    </section>
+
+
+<footer>
+    <h3>👟 Nairobi Classic Outfits</h3>
+
+    <p>Step Into Style. Step Into Confidence. 👟✨</p>
+
+    <p>🚚 Countrywide delivery available at a fee.</p>
+
+    <p>📞 0798485535 | 📧 amoutfits26@gmail.com</p>
+
+    <br>
+
+    <p>
+        © 2026 Nairobi Classic Outfits. All Rights Reserved.
+    </p>
+  <br>
+
+<a href="#home" class="btn">⬆️ Back to Top</a>
+</footer>
+
+</body>
+</html>
